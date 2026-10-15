@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ffe8f0">
+<title>Happy Birthday Sweetheart ❤️‍🩹</title>
+<style>
+:root{--pink:#ff8eb5;--dark:#a52d60;--soft:#fff4f8;--ink:#60384b}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:"Trebuchet MS",Arial,sans-serif;color:var(--ink);background:radial-gradient(circle at 10% 10%,#ffd9e7,transparent 35%),radial-gradient(circle at 90% 80%,#e9dcff,transparent 32%),#fff8fb;overflow-x:hidden}
+main{width:min(850px,calc(100% - 28px));margin:auto;padding:34px 0 24px;position:relative;z-index:1}
+.hero{text-align:center;padding:clamp(32px,8vw,70px) 18px 36px;background:#ffffffbd;border:1px solid #fff;border-radius:32px;box-shadow:0 20px 60px #b54a7820}
+.top-flower{font-size:2rem;letter-spacing:.2em}
+h1{color:#c04479;font-size:clamp(2.5rem,8vw,5rem);line-height:1.08;margin:20px 0 12px;text-shadow:0 4px 0 #ffe1eb}
+.hero p{line-height:1.8;font-size:1.1rem;margin:12px auto;max-width:580px}
+.name{color:#ad3c70;font-weight:900;letter-spacing:.06em}
+h2{text-align:center;color:#b33e73;margin:34px 0 8px;font-size:clamp(1.6rem,5vw,2.4rem)}
+.hint{text-align:center;line-height:1.7;margin:0 auto 22px;max-width:600px}
+.picture-card{width:min(440px,100%);margin:20px auto 12px;padding:12px;background:white;border:1px solid #ffd5e3;border-radius:24px;box-shadow:0 12px 34px #b54a781a}
+.picture-placeholder{min-height:210px;border-radius:16px;background:linear-gradient(135deg,#ffe5ef,#f6eaff);display:grid;place-items:center;text-align:center;padding:20px;color:#ad3c70}
+.picture-placeholder .emoji{font-size:3rem;display:block;margin-bottom:8px}
+.picture-placeholder p{margin:0;line-height:1.6}
+.letters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.envelope{position:relative;min-height:155px;border:1px solid #ffc5da;border-radius:18px;background:linear-gradient(145deg,#fff,#fff0f6);box-shadow:0 10px 25px #b54a781a;cursor:pointer;color:#9d3264;font-family:inherit;padding:18px 10px;transition:transform .2s,box-shadow .2s}
+.envelope:hover{transform:translateY(-4px);box-shadow:0 16px 30px #b54a7829}
+.env-icon{font-size:3.3rem;display:block;margin-bottom:8px;filter:drop-shadow(0 4px 4px #d16c9b20)}
+.envelope strong{display:block;font-size:1rem}
+.envelope small{display:block;margin-top:5px;color:#aa6884}
+.letter{display:none;margin-top:22px;padding:clamp(22px,5vw,38px);background:#fff;border:1px solid #ffd1e2;border-radius:24px;box-shadow:0 15px 40px #b54a781a;animation:appear .3s ease}
+.letter.open{display:block}
+.letter h3{text-align:center;color:#b83d76;margin:0 0 20px;font-size:1.45rem}
+.letter-body{white-space:pre-wrap;line-height:1.95;overflow-wrap:anywhere;font-size:1rem}
+.close{display:block;margin:22px auto 0;padding:12px 20px;border:1px solid #ffc5da;border-radius:999px;background:#fff0f6;color:#9d3264;font-weight:800;font-size:.95rem;cursor:pointer}
+.footer{text-align:center;padding:30px 10px 12px;color:#a45f7d;line-height:1.8}
+
+.birthday-glow{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0;background:linear-gradient(135deg,#fff7fb 0%,#ffe5ef 28%,#f5e9ff 62%,#fff4f8 100%);background-size:250% 250%;animation:bgDream 18s ease-in-out infinite}
+.birthday-glow:before,.birthday-glow:after{content:"";position:absolute;width:65vw;height:65vw;max-width:650px;max-height:650px;border-radius:50%;filter:blur(45px);opacity:.35;background:#ffb8d2;animation:glowDrift 14s ease-in-out infinite alternate}
+.birthday-glow:before{top:-20%;left:-15%}.birthday-glow:after{bottom:-22%;right:-15%;background:#cfc0ff;animation-delay:-5s}
+.birthday-glow span{position:absolute;color:#d56e9a;opacity:.45;font-size:clamp(18px,3vw,30px);animation:twinkle 4s ease-in-out infinite}
+.birthday-glow span:nth-child(1){top:12%;left:12%}.birthday-glow span:nth-child(2){top:25%;right:9%;animation-delay:-1s}.birthday-glow span:nth-child(3){top:52%;left:5%;animation-delay:-2s}.birthday-glow span:nth-child(4){top:72%;right:12%;animation-delay:-.5s}.birthday-glow span:nth-child(5){top:86%;left:25%;animation-delay:-2.5s}.birthday-glow span:nth-child(6){top:42%;right:22%;animation-delay:-1.5s}.birthday-glow span:nth-child(7){top:8%;right:35%;animation-delay:-3s}.birthday-glow span:nth-child(8){top:62%;left:30%;animation-delay:-2s}
+.music-toggle{display:block;margin:20px auto 0;border:1px solid #f4b8d0;border-radius:999px;padding:12px 19px;background:linear-gradient(135deg,#fff,#ffeaf3);color:#a83263;font:inherit;font-weight:800;box-shadow:0 8px 22px #b54a781a;cursor:pointer}
+.music-toggle:hover{transform:translateY(-2px)}.music-note{font-size:.85rem!important;color:#a45f7d;margin:8px auto 0!important}
+@keyframes bgDream{0%,100%{background-position:0% 40%}50%{background-position:100% 60%}}
+@keyframes glowDrift{from{transform:translate(0,0) scale(1)}to{transform:translate(9vw,5vh) scale(1.12)}}
+@keyframes twinkle{0%,100%{opacity:.22;transform:scale(.85) rotate(0)}50%{opacity:.7;transform:scale(1.15) rotate(15deg)}}
+\n.float{position:fixed;bottom:-30px;z-index:0;pointer-events:none;animation:floatUp linear forwards;opacity:.65}
+@keyframes floatUp{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+
+.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:22px auto;max-width:780px}
+.photo-tile{padding:8px;background:#fff;border:1px solid #ffd0e0;border-radius:20px;box-shadow:0 10px 26px #b54a781b;cursor:pointer;color:#a83263;font:inherit;font-weight:800;overflow:hidden;transition:transform .2s}
+.photo-tile:hover{transform:translateY(-4px)}
+.photo-tile img{width:100%;height:280px;object-fit:cover;display:block;border-radius:14px}
+.photo-tile span{display:block;padding:11px 3px 5px;font-size:.9rem}
+.lightbox{display:none;position:fixed;inset:0;z-index:10;background:#250b1deF;align-items:center;justify-content:center;flex-direction:column;padding:24px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:min(92vw,720px);max-height:78vh;object-fit:contain;border-radius:16px;box-shadow:0 10px 40px #0006}
+.lightbox p{color:#fff;margin:14px 0 0;font-weight:800}
+.lightbox-close{position:absolute;right:18px;top:16px;background:#fff;border:0;border-radius:50%;width:42px;height:42px;font-size:1.2rem;cursor:pointer}
+@media(max-width:620px){.gallery{grid-template-columns:1fr 1fr}.photo-tile img{height:230px}.photo-tile:last-child{grid-column:1 / -1}.photo-tile:last-child img{height:300px}}
+\n@media(max-width:620px){.letters{grid-template-columns:1fr}.envelope{min-height:115px;display:flex;align-items:center;justify-content:center;gap:16px;text-align:left}.env-icon{font-size:2.7rem;margin:0}.envelope small{margin-top:3px}.picture-placeholder{min-height:180px}}
+</style>
+</head>
+<body>
+<div class="birthday-glow" aria-hidden="true"><span>✦</span><span>♡</span><span>✧</span><span>✦</span><span>♡</span><span>✧</span><span>✦</span><span>♡</span></div>
+<main>
+  <section class="hero">
+    <div class="top-flower">🌷 💗 🕊️</div>
+    <h1>Happy Birthday<br>Sweetheart ❤️‍🩹</h1>
+    <p>Today is your special day, my favorite person. I made this little place just for you, with love in every corner. 🥹🎂</p>
+    <div class="name">MY PAKHI 🕊️ · NUBRII 👸</div>
+    <button class="music-toggle" id="music-toggle" onclick="toggleMusic()">♫ Play Soft Birthday Music</button>
+    <p class="music-note" id="music-note">Tap to play a gentle, dreamy melody 🎶</p>
+  </section>
+
+  <section>
+    <h2>Pakhi’s Photo Gallery 🖼️💗</h2>
+    <p class="hint">A little gallery made just for you, my Pakhi. Tap any picture to see it bigger. 🌸</p>
+    <div class="gallery">
+      <button class="photo-tile" onclick="showPhoto('photos/pakhi-1.jpg')" aria-label="Open first photo"><img src="photos/pakhi-1.jpg" alt="Pakhi in a blue outfit"><span>🌷 My Pakhi</span></button>
+      <button class="photo-tile" onclick="showPhoto('photos/pakhi-2.jpg')" aria-label="Open second photo"><img src="photos/pakhi-2.jpg" alt="Pakhi in a black outfit with floral details"><span>🕊️ Sweetheart</span></button>
+      <button class="photo-tile" onclick="showPhoto('photos/pakhi-3.jpg')" aria-label="Open third photo"><img src="photos/pakhi-3.jpg" alt="Pakhi beside a tree"><span>💗 Beautiful Memories</span></button>
+    </div>
+    <div class="lightbox" id="lightbox" onclick="hidePhoto()" aria-label="Close enlarged photo">
+      <button class="lightbox-close" onclick="event.stopPropagation();hidePhoto()" aria-label="Close">✕</button>
+      <img id="large-photo" src="" alt="Enlarged photo of Pakhi">
+      <p>My favorite person ❤️‍🩹</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Three Little Letters 💌</h2>
+    <p class="hint">Choose an envelope to open your letter. Every message is saved separately, just for you. 🫶</p>
+    <div class="letters">
+      <button class="envelope" onclick="openLetter(1)"><span class="env-icon">💌</span><span><strong>Letter One 🌷</strong><small>Birthday Wishes</small></span></button>
+      <button class="envelope" onclick="openLetter(2)"><span class="env-icon">💌</span><span><strong>Letter Two 👸</strong><small>My Pakhi</small></span></button>
+      <button class="envelope" onclick="openLetter(3)"><span class="env-icon">💌</span><span><strong>Letter Three ❤️</strong><small>My Favorite Person</small></span></button>
+    </div>
+    <article class="letter" id="letter" aria-live="polite">
+      <h3 id="letter-title"></h3>
+      <div class="letter-body" id="letter-body"></div>
+      <button class="close" onclick="closeLetter()">♡ Close Letter</button>
+    </article>
+  </section>
+  <footer class="footer">Made with all my love, for you, Sweetheart. 🎂💗<br>Forever your Pakhi’s person 🕊️</footer>
+</main>
+<script>
+const letters={
+1:{title:"🌷 Birthday Wishes",body:`HAPPY BIRTHDAY TO YOU 🌷💗
+আজকের এই বিশেষ মুহূর্তে সবার আগে তোমাক একটা কথা বলতে চাই - তোমার জীবন সবসময় সুখ, শান্তি আর হাসিতে ভরে উঠুক । 🖤✨
+তোমার হাসি যেন কখনো মলিন না হয়, তোমার সব সপ্ন যে একে একে পূরণ হয় । জীবনের প্রতিটা নতুন দিনে আরও বেশি আনন্দ আর ভালোবাসা পাও - এই দোয়া করি । 🫶🌹
+আজকের দিনটা তোমার জন্য যেমন বিশেষ , তেমনই তোমার আগামী দিনগুলোও সুন্দর হোক । নিজের যত্ন নিও, সবসময় হাসিখুশি থেকো আমি থাকি আর না থাকি । 🤍🎀
+HAPPY BIRTHDAY ONCE AGAIN 🎂✨🤍
+WISHING YOU ENDLESS HAPPINESS AND BEAUTIFUL MOMENT ❤️‍🩹✨
+PAKHI 🕊️👀`},
+2:{title:"👸 My Pakhi",body:`HAPPY BIRTHDAY MY BOW Xann 😭👸
+MANY MANY HAPPY RETURNS OF THE DAY...!🫶
+HAPPY BIRTHDAY MY PAKHI🕊️
+
+MY EVERYTHING nubrii 🥹❤️‍🩹`},
+3:{title:"❤️ My Favorite Person",body:`Happy Birthday To My Favorite Person 🎂❤️🥺
+Today is all about you 💞✨ the beautiful soul who came into my life and made it softer, happier, and filled with so much love 🤍 honestly, I don’t think words will ever be enough to explain how grateful I am for your presence ❤️You deserve a life filled with peace, genuine happiness, success, good health, and endless love 🫂 because your heart is rare, your soul is beautiful, and the way you care for people deserves to be appreciated every single day 🥺
+Thank you for your love, your patience, your support, your reassurance, and for simply being you ❤️✨ thank you for all the smiles you’ve given me, for the comfort you bring into my life, and for the way you make ordinary moments feel special 💞
+As you celebrate another beautiful year today 🎉 I pray life becomes kinder to you, your dreams come true, and your heart never lacks reasons to smile ❤️may this new chapter bring you peace, growth, blessings, and everything your heart secretly wishes for 🥺✨
+Happy Birthday, my love 🎂❤️`}
+};
+function openLetter(n){
+ document.getElementById('letter-title').textContent=letters[n].title;
+ document.getElementById('letter-body').textContent=letters[n].body;
+ document.getElementById('letter').classList.add('open');
+ document.getElementById('letter').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function closeLetter(){
+ document.getElementById('letter').classList.remove('open');
+ document.querySelector('.letters').scrollIntoView({behavior:'smooth',block:'center'});
+}
+
+function showPhoto(src){
+ const box=document.getElementById('lightbox');
+ document.getElementById('large-photo').src=src;
+ box.classList.add('open');
+}
+function hidePhoto(){
+ document.getElementById('lightbox').classList.remove('open');
+ document.getElementById('large-photo').src='';
+}
+document.addEventListener('keydown',e=>{if(e.key==='Escape')hidePhoto()});
+\n
+let audioCtx=null, musicTimer=null, musicOn=false, noteIndex=0;
+const melody=[523.25,659.25,783.99,659.25,587.33,698.46,783.99,698.46,523.25,587.33,659.25,523.25];
+function playSoftNote(freq, startTime){
+  if(!audioCtx) return;
+  const osc=audioCtx.createOscillator(), gain=audioCtx.createGain();
+  const shimmer=audioCtx.createOscillator(), shimmerGain=audioCtx.createGain();
+  osc.type='sine';osc.frequency.setValueAtTime(freq,startTime);
+  shimmer.type='sine';shimmer.frequency.setValueAtTime(freq*2,startTime);
+  gain.gain.setValueAtTime(0.0001,startTime);
+  gain.gain.exponentialRampToValueAtTime(0.035,startTime+0.12);
+  gain.gain.exponentialRampToValueAtTime(0.0001,startTime+1.05);
+  shimmerGain.gain.setValueAtTime(0.0001,startTime);
+  shimmerGain.gain.exponentialRampToValueAtTime(0.008,startTime+0.15);
+  shimmerGain.gain.exponentialRampToValueAtTime(0.0001,startTime+0.85);
+  osc.connect(gain);gain.connect(audioCtx.destination);
+  shimmer.connect(shimmerGain);shimmerGain.connect(audioCtx.destination);
+  osc.start(startTime);shimmer.start(startTime);
+  osc.stop(startTime+1.1);shimmer.stop(startTime+.9);
+}
+function melodyStep(){
+ if(!musicOn||!audioCtx)return;
+ const now=audioCtx.currentTime;
+ playSoftNote(melody[noteIndex%melody.length],now);
+ if(noteIndex%4===0) playSoftNote(melody[(noteIndex+2)%melody.length]/2,now);
+ noteIndex++;
+}
+async function toggleMusic(){
+ const btn=document.getElementById('music-toggle');
+ const note=document.getElementById('music-note');
+ if(!musicOn){
+   const AC=window.AudioContext||window.webkitAudioContext;
+   if(!AC){note.textContent='This browser does not support the music feature.';return;}
+   audioCtx=audioCtx||new AC();
+   if(audioCtx.state==='suspended') await audioCtx.resume();
+   musicOn=true;melodyStep();musicTimer=setInterval(melodyStep,850);
+   btn.textContent='♫ Pause Soft Birthday Music';
+   note.textContent='Soft dreamy melody is playing for you 💗';
+ }else{
+   musicOn=false;clearInterval(musicTimer);musicTimer=null;
+   if(audioCtx&&audioCtx.state==='running') await audioCtx.suspend();
+   btn.textContent='♫ Play Soft Birthday Music';
+   note.textContent='Tap whenever you want to hear the melody again 🎶';
+ }
+}
+\nfunction floatHeart(){
+ const e=document.createElement('div');e.className='float';
+ e.textContent=['💗','💕','✨','🌸','🕊️'][Math.floor(Math.random()*5)];
+ e.style.left=Math.random()*100+'vw';e.style.fontSize=(15+Math.random()*17)+'px';
+ e.style.animationDuration=(7+Math.random()*5)+'s';document.body.appendChild(e);
+ setTimeout(()=>e.remove(),13000);
+}
+setInterval(floatHeart,1000);
+</script>
+</body>
+</html>
